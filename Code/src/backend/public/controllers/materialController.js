@@ -47,6 +47,7 @@ const MaterialController = {
                 else if (req.query.professor && material.professor !== req.query.professor) found = false
                 else if (req.query.periodo && material.periodo !== req.query.periodo) found = false
                 else if (req.query.createdAt && material.createdAt < req.query.createdAt) found = false
+                else if (req.query.assunto && material.assunto !== req.query.assunto) found = false
                 else if (req.query.curso && material.curso !== req.query.curso) found = false
                 return found;
             });

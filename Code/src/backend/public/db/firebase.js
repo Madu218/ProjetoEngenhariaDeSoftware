@@ -39,4 +39,9 @@ const uploadFile = (req, res, next) => {
   stream.end(arquivo.buffer);
 };
 
+const deleteFile = (fileName) => {
+  bucket.file(fileName).delete();
+};
+
 module.exports = uploadFile;
+module.exports = deleteFile;
