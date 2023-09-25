@@ -1,0 +1,33 @@
+nav {
+    background-color: rgba(213, 0, 34, 1);
+    color: white;
+    padding: .8rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-buttons {
+    display: flex;
+
+    /*
+    border: 1px solid plum;
+    */
+}
+  
+nav .material-symbols-outlined {
+    color: white;
+    font-size: 2rem;
+}
+  
+nav button {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+  
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+}

@@ -1,0 +1,68 @@
+:root {
+    --main-color: #FF042C;
+    --border-tst: 1px solid plum;
+}
+
+.card {
+    background-color: white;
+
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.08);
+    border-bottom: 3px var(--main-color) solid;
+  
+    width: 17rem;
+    height: 14rem;
+    margin: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.main-infos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.main-infos img {
+    margin-top: -4.5rem;
+
+}
+
+.main-infos .text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.main-infos .text div {
+    border-left: 0.1rem var(--main-color) solid;
+}
+
+.tags {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tags div {
+    padding: .4rem;
+    border-radius: 8px;
+    border-bottom: 0.1rem var(--main-color) solid;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0rem 1rem;
+}
+
+.card-buttons button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/**/
