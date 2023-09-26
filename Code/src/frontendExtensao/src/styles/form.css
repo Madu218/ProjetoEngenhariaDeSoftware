@@ -1,0 +1,28 @@
+.form {
+    background-image: url(../assets/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    width: 100%;
+    height: 56rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /*position: relative;*/
+}
+
+.form form {
+    background: rgba(157.17, 206.13, 203.19, 0.14);
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+
+    width: 90%;
+    height: 50rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

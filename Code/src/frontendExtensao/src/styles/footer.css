@@ -1,0 +1,7 @@
+footer {
+    background-color: rgba(213, 0, 34, 1);
+    padding: 3rem;
+
+    display: flex;
+    justify-content: flex-end;
+}

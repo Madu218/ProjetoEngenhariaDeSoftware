@@ -5,7 +5,7 @@ import logo from "../assets/cin.png";
 export default function Navbar() {
     return (
         <nav>
-            <img src={logo} alt="" />
+            <img src={logo} alt="logo do CIn" />
             <div className="nav-buttons">
                 <button>
                     <span class="material-symbols-outlined">search</span>
