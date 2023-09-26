@@ -6,6 +6,7 @@
 .card {
     background-color: white;
 
+    padding: .4rem .2rem;
     border-radius: 20px;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.08);
     border-bottom: 3px var(--main-color) solid;
@@ -28,7 +29,6 @@
 
 .main-infos img {
     margin-top: -4.5rem;
-
 }
 
 .main-infos .text {
@@ -39,6 +39,7 @@
 
 .main-infos .text div {
     border-left: 0.1rem var(--main-color) solid;
+    padding-left: .5rem;
 }
 
 .tags {
