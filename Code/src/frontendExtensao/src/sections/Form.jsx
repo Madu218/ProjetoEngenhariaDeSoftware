@@ -21,7 +21,7 @@ export default function Form() {
     function listarPeriodos() {
         let periodos = [];
         for (let i = 1; i < 11; i++) {
-            periodos.push(<option value={i}>{i}° período</option>);
+            periodos.push(<option value={i}>{i}° Período</option>);
         };
         return periodos;
     };

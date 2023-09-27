@@ -25,6 +25,69 @@
     gap: 3rem;
 }
 
+.form form .text-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form form .text-inputs input {
+    width: 28rem;
+}
+
+.form form .text-inputs input::placeholder {
+    color: #242424;
+}
+
+.form form .text-inputs input, .tres-marias select {
+    height: 2.5rem;
+
+    border: none;
+    border-bottom: 2px rgba(213, 0, 34, 1) solid;
+    border-radius: .4rem;
+
+    background: rgba(255, 255, 255, 0);
+    outline: none;
+    padding: 0 1rem;
+
+    font-size: .95rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: #242424;
+}
+
+.tres-marias {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.tres-marias select {
+    width: 9rem;
+}
+
+.form form .buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+.form form .buttons button {
+    height: 2.5rem;
+    width: 7rem;
+
+    background: rgba(255, 255, 255, 0.34);
+    border: none;
+    border-bottom: 3px rgba(213, 0, 34, 1) solid;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.08);
+    border-radius: .7rem;
+
+    font-size: .95rem;
+    margin-top: 1rem;
+    font-family: 'Open Sans', sans-serif;
+
+    cursor: pointer;
+}
+
 .drop-area {
     width: 28rem;
     height: 18rem;

@@ -3,3 +3,7 @@
 @import "./styles/carousel.css";
 @import "./styles/footer.css";
 @import "./styles/form.css";
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
