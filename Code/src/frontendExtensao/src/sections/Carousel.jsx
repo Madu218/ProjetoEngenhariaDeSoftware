@@ -8,7 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import chevronLeft from '../assets/chevron-left.png';
 import chevronRight from '../assets/chevron-right.png';
 
-import Card from "./Card";
+import Card from "../components/Card";
 
 function CustomArrow(props) {
     const { className, style, onClick } = props;
@@ -18,7 +18,7 @@ function CustomArrow(props) {
             style={{ ...style, display: "block", color: "black" }}
             onClick={onClick}
         >
-            <img src={props.img} alt="heart" 
+            <img src={props.img} alt="heart"
                 style={{ position: "absolute", left: "-.8rem" }}
             />
         </div>
@@ -35,7 +35,7 @@ export default function Carousel(props) {
         slidesToScroll: 1,
         nextArrow: <CustomArrow img={chevronRight} />,
         prevArrow: <CustomArrow img={chevronLeft} />,
-      };
+    };
     return (
         <div className="carousel">
             <Slider {...settings}>

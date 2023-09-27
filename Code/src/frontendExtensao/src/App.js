@@ -1,10 +1,10 @@
 import './App.css';
 import React from 'react';
 
-import Navbar from './components/Navbar';
-import Carousel from './components/Carousel';
-import Footer from './components/Footer';
-import Form from './components/Form';
+import Navbar from './sections/Navbar';
+import Carousel from './sections/Carousel';
+import Footer from './sections/Footer';
+import Form from './sections/Form';
 
 function App() {
   return (
