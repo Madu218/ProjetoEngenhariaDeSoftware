@@ -104,7 +104,50 @@
 
 .files-exhibit {
     display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 29rem;
+    height: 12rem;
+
+    font-size: .8rem;
+    margin: 1rem .2rem;
+    gap: 0rem .8rem;
 }
+
+.files-exhibit .file{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    gap: 1rem;
+    width: 13.5rem;
+}
+
+.files-exhibit .file .left-side {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.files-exhibit .file img{
+    width: 2rem;
+}
+
+.files-exhibit .file button img {
+    width: 1rem;
+}
+
+.files-exhibit .file button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 
 /*
 */

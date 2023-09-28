@@ -2,6 +2,9 @@ import React from "react";
 
 import DragAndDrop from "../components/DrapAndDrop";
 
+import fileIcon from "../assets/file.png";
+import trash from "../assets/trash.png";
+
 export default function Form() {
     const [files, setFiles] = React.useState([]);
 
@@ -9,8 +12,16 @@ export default function Form() {
         return files.map((file) => {
             return (
                 <div className="file">
-                    <p>{file.name}</p>
-                    <p>{file.size}</p>
+                    <div className="left-side">
+                        <img src={fileIcon} alt="ícone de arquivo" />
+                        <div>
+                            <div>{file.name}</div>
+                            <div>{parseInt(file.size / 1024)} KB</div>
+                        </div>
+                    </div>
+                    <button>
+                        <img src={trash} alt="icon de delete" />
+                    </button>
                 </div>
             );
         });
