@@ -1,12 +1,32 @@
 import React from "react";
 
 import DragAndDrop from "../components/DrapAndDrop";
+import Selects from "../components/Selects";
+import FormInputs from "../components/FormInputs";
 
 import fileIcon from "../assets/file.png";
 import trash from "../assets/trash.png";
 
 export default function Form() {
     const [files, setFiles] = React.useState([]);
+    const [material, setMaterial] = React.useState({
+        titulo: "",
+        autor: "",
+        assunto: "",
+        periodo: "",
+        professor: "",
+        codigoDisciplina: "",
+        curso: "",
+    });
+
+    function handleChange(e) {
+        const { name, value } = e.target;
+        setMaterial((prevMaterial) => ({
+            ...prevMaterial,
+            [name]: value,
+        }));
+        console.log(material);
+    };
 
     function displayFiles() {
         return files.map((file) => {
@@ -19,55 +39,32 @@ export default function Form() {
                             <div>{parseInt(file.size / 1024)} KB</div>
                         </div>
                     </div>
-                    <button>
-                        <img src={trash} alt="icon de delete" />
-                    </button>
+                    <button><img src={trash} alt="icon de delete" /></button>
                 </div>
             );
         });
     };
 
-    function submitForm() {};
-
-    function listarPeriodos() {
-        let periodos = [];
-        for (let i = 1; i < 11; i++) {
-            periodos.push(<option value={i}>{i}° Período</option>);
-        };
-        return periodos;
+    function submitForm(e) {
+        e.preventDefault()
+        const formData = new FormData();
+        formData.append('file', files);
+        formData.append('titulo', material.titulo);
+        formData.append('autor', material.autor);
+        formData.append('assunto', material.assunto);
+        formData.append('periodo', material.periodo);
+        formData.append('professor', material.professor);
+        formData.append('codigoDisciplina', material.codigoDisciplina);
+        formData.append('curso', material.curso);
+        // Enviar Form
     };
 
     return (
         <section className="form">
-
             <form onSubmit={submitForm} encType="multipart/form-data">
-
                 <div className="text-inputs">
-                    <input type="text" placeholder="Título" />
-                    <input type="text" placeholder="Assunto" />
-                    <input type="text" placeholder="Professor" />
-
-                    <div className="tres-marias">
-                        <select name="Curso" id="">
-                            <option value="" disabled selected>Curso</option>
-                            <option value="CC">CC</option>
-                            <option value="EC">EC</option>
-                            <option value="SI">SI</option>
-                        </select>
-
-                        <select name="Disciplina" id="">
-                            <option value="" disabled selected>Disciplina</option>
-                            <option value="CC">IF668</option>
-                            <option value="EC">IF669</option>
-                            <option value="SI">IF670</option>
-                        </select>
-
-                        <select name="Período" id="">
-                            <option value="" disabled selected>Período</option>
-                            <option value="CC">Eletiva</option>
-                            {listarPeriodos()}
-                        </select>
-                    </div>
+                    <FormInputs handleChange={handleChange} />
+                    <Selects handleChange={handleChange} />
 
                     <div className="buttons">
                         <button>Postar</button>
@@ -79,9 +76,7 @@ export default function Form() {
                     <DragAndDrop addFiles={setFiles} />
                     <div className="files-exhibit"> {displayFiles()} </div>
                 </div>
-
             </form>
-
         </section>
     );
 };
