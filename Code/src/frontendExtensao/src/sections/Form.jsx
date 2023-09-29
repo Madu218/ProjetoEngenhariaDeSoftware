@@ -3,9 +3,8 @@ import React from "react";
 import DragAndDrop from "../components/DrapAndDrop";
 import Selects from "../components/Selects";
 import FormInputs from "../components/FormInputs";
+import ChosenFiles from "../components/ChosenFiles";
 
-import fileIcon from "../assets/file.png";
-import trash from "../assets/trash.png";
 
 export default function Form() {
     const [files, setFiles] = React.useState([]);
@@ -25,24 +24,6 @@ export default function Form() {
             ...prevMaterial,
             [name]: value,
         }));
-        console.log(material);
-    };
-
-    function displayFiles() {
-        return files.map((file) => {
-            return (
-                <div className="file">
-                    <div className="left-side">
-                        <img src={fileIcon} alt="ícone de arquivo" />
-                        <div>
-                            <div>{file.name}</div>
-                            <div>{parseInt(file.size / 1024)} KB</div>
-                        </div>
-                    </div>
-                    <button><img src={trash} alt="icon de delete" /></button>
-                </div>
-            );
-        });
     };
 
     function submitForm(e) {
@@ -74,7 +55,7 @@ export default function Form() {
 
                 <div className="files-input">
                     <DragAndDrop addFiles={setFiles} />
-                    <div className="files-exhibit"> {displayFiles()} </div>
+                    <ChosenFiles files={files} attFiles={setFiles} />
                 </div>
             </form>
         </section>
